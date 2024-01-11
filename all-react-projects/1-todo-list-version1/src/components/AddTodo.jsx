@@ -1,8 +1,9 @@
 import { useState } from "react";
+import {MdOutlineAdd} from "react-icons/md";
 
 function AddTodo({ onNewItem }) {
-  const [todoName, setTodoName] = useState();
-  const [dueDate, setDueDate] = useState();
+  const [todoName, setTodoName] = useState('');
+  const [dueDate, setDueDate] = useState('');
 
   const handleNameChange = (event) => {
     setTodoName(event.target.value);
@@ -39,7 +40,7 @@ function AddTodo({ onNewItem }) {
             className="btn btn-success omi-btn"
             onClick={handleAddButtonClick}
           >
-            Add
+            <MdOutlineAdd />
           </button>
         </div>
       </div>
