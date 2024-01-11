@@ -15,7 +15,7 @@ function App() {
       let newFoodItem = event.target.value;
       let newItems = [...foodItems, newFoodItem];
       setFoodItems(newItems);
-      console.log(`hello baccho : ${newFoodItem}`)
+      console.log(`Your Food is : ${newFoodItem}`)
 
     }
   };
