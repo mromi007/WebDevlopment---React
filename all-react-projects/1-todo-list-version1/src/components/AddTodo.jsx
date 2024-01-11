@@ -1,19 +1,48 @@
-function AddTodo() {
+import { useState } from "react";
+
+function AddTodo({ onNewItem }) {
+  const [todoName, setTodoName] = useState();
+  const [dueDate, setDueDate] = useState();
+
+  const handleNameChange = (event) => {
+    setTodoName(event.target.value);
+  };
+
+  const handleDateChange = (event) => {
+    setDueDate(event.target.value);
+  };
+
+  const handleAddButtonClick = () => {
+    onNewItem(todoName, dueDate);
+    setTodoName("");
+    setDueDate("");
+  }
+
   return (
     <div className="container todo-container">
-    <div className="row omi-row">
-      <div className="col-6">
-        <input type="text" placeholder="Enter toDo here"></input>
+      <div className="row omi-row">
+        <div className="col-6">
+          <input
+            type="text"
+            placeholder="Enter toDo here"
+            value={todoName}
+            onChange={handleNameChange}
+          ></input>
+        </div>
+        <div className="col-4">
+          <input type="date"
+          value={dueDate} onChange={handleDateChange}></input>
+        </div>
+        <div className="col-2">
+          <button
+            type="button"
+            className="btn btn-success omi-btn"
+            onClick={handleAddButtonClick}
+          >
+            Add
+          </button>
+        </div>
       </div>
-      <div className="col-4">
-        <input type="date"></input>
-      </div>
-      <div className="col-2">
-        <button type="button" className="btn btn-success omi-btn">
-          Add
-        </button>
-      </div>
-    </div>
     </div>
   );
 }
