@@ -1,18 +1,18 @@
-import { MdDelete } from "react-icons/md";
+import { AiFillDelete } from "react-icons/ai";
 
 function TodoItem({ todoName, todoDate, onDeleteClick }) {
   return (
     <div className="container">
-      <div className="row omi-row">
+      <div className="row kg-row">
         <div className="col-6">{todoName}</div>
         <div className="col-4">{todoDate}</div>
         <div className="col-2">
           <button
             type="button"
-            className="btn btn-danger omi-btn"
+            className="btn btn-danger kg-button"
             onClick={() => onDeleteClick(todoName)}
           >
-            <MdDelete />
+            <AiFillDelete />
           </button>
         </div>
       </div>
