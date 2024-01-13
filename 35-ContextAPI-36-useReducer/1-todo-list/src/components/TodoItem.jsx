@@ -1,6 +1,9 @@
 import { AiFillDelete } from "react-icons/ai";
+import { TodoItemsContext } from "../store/todo-items.store";
+import {useContext} from "react";
 
-function TodoItem({ todoName, todoDate, deleteItem }) {
+function TodoItem({ todoName, todoDate,}) {
+  const {deleteItem} = useContext(TodoItemsContext);
   return (
     <div className="container">
       <div className="row kg-row">
