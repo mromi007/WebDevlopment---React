@@ -21,10 +21,8 @@ function App() {
     setTodoItems(newTodoItems);
   };
 
-  const defaultTodo = ({ name: "ghee", dueDate: "today" })
-
   return (
-    <TodoItemsContext.Provider value={[defaultTodo]}>
+    <TodoItemsContext.Provider value={todoItems}>
       <center className="todo-container">
         <AppName />
         <AddTodo onNewItem={handleNewItem} />
