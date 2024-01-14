@@ -1,4 +1,4 @@
-import AddTodo from "./components/AddTodo";
+ import AddTodo from "./components/AddTodo";
 import AppName from "./components/AppName";
 import "./App.css";
 import TodoItemss from "./components/TodoItemss";
